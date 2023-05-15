@@ -48,12 +48,12 @@
 					"script": {
 						"exec": [
 							"//2\r",
-							"var jsonResponse = pm.response.json(); \r",
-							"\r",
-							"//3\r",
 							"pm.test(\"Status code is 200\", function () { \r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
+							"\r",
+							"//3\r",
+							"var jsonResponse = pm.response.json(); \r",
 							"\r",
 							"//4\r",
 							"pm.test(\"Name is correct\", function () { \r",
@@ -402,6 +402,7 @@
 							"    pm.expect(Response.qa_salary_after_6_months).to.eql(Request.get(\"salary\")*2);  ",
 							"});",
 							"",
+							"//16",
 							"pm.test(\"qa_salary_after_12_months is correct\", function () {",
 							"    pm.expect(Response.qa_salary_after_12_months).to.eql(Request.get(\"salary\")*2.7);  ",
 							"});",
